@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef controlled_device_example__MOCAPNODE_HPP__
-#define controlled_device_example__MOCAPNODE_HPP__
+#ifndef CONTROLLED_DEVICE_EXAMPLE__MOCAPNODE_HPP__
+#define CONTROLLED_DEVICE_EXAMPLE__MOCAPNODE_HPP__
 
 #include "sensor_msgs/msg/imu.hpp"
 
@@ -49,4 +49,4 @@ private:
 }  // namespace controlled_device_example
 
 
-#endif  // controlled_device_example__MOCAPNODE_HPP__
+#endif  // CONTROLLED_DEVICE_EXAMPLE__MOCAPNODE_HPP__
