@@ -57,9 +57,9 @@ If you follow this protocol, you will be able to use the Device4ROS2 control app
 
 ## Uso de `ControlledLifecycleNode` (ROS and ROS2)
 
-To use this protocol you have two alternatives: The first is to implement the protocol yourself. The second is to use a library that is implemented within `device_control`, which completely simplifies the management of this protocol. An example of this second alternative is in the [device4ros2_system_example](https://github.com/Device4ROS2-Project/device4ros2_system_example) package . Note that there is a [ROS version](https://github.com/Device4ROS2-Project/device4ros2_core/tree/noetic/device_control) that implements in ROS what would be a lifecycle node.
+To use this protocol you have two alternatives: The first is to implement the protocol yourself. The second is to use a library that is implemented within `device_control`, which completely simplifies the management of this protocol. An example of this second alternative is in the [controlled_device_example](https://github.com/MOCAP4ROS2-Project/device_control/tree/main/controlled_device_example) package . Note that there is a [ROS version](https://github.com/MOCAP4ROS2-Project/device_control/tree/noetic/controlled_device_example) that implements in ROS what would be a lifecycle node.
 
-The magic is done by the `ControlledLifecycleNode` class, which in turn inherits from` rclcpp_lifecycle :: LifecycleNode`. If you make your node inherit from this class, it implements the protocol.
+The magic is done by the `ControlledLifecycleNode` class, which in turn inherits from` rclcpp_lifecycle::LifecycleNode`. If you make your node inherit from this class, it implements the protocol.
 
 In addition to using the normal callbacks (`on_activate`,` on_deactivate`, ...) you can redefine the following methods, in case you want to be notified of these transitions:
 
