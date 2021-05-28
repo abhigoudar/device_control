@@ -1,1 +1,0 @@
-# controlled_device_example
