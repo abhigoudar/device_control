@@ -11,7 +11,7 @@ In the network there is a control node that triggers the start or stop of each o
 ![device_control_arch](https://user-images.githubusercontent.com/3810011/118769923-fa52ff00-b880-11eb-8eb2-443dc5121a2b.png)
 
 This protocol uses two types of messages: 
-* `device_controls_msgs/msg/Control`: Uses the topic `/device_control` (QoS reliable), and controls the startup and shutdown of systems
+* `device_control_msgs/msg/Control`: Uses the topic `/device_control` (QoS reliable), and controls the startup and shutdown of systems
 
 ```
 int8 START=0
@@ -29,7 +29,7 @@ string[] device_systems
 
 
 
-* `device_controls_msgs/msg/DeviceInfo`: Uses the topic `/device_environment` (QoS reliable + transient_local) and each system publishes information about it, including which topics it uses to publish the information it produces.
+* `device_control_msgs/msg/DeviceInfo`: Uses the topic `/device_environment` (QoS reliable + transient_local) and each system publishes information about it, including which topics it uses to publish the information it produces.
 
 ```
 int8 ROS2=0
