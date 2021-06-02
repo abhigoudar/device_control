@@ -23,6 +23,7 @@ jobs:
       - name: build and test
         uses: ros-tooling/action-ros-ci@0.2.1
         with:
+          package-name: device_control controlled_device_example device_control_msgs 
           target-ros2-distro: foxy
           colcon-mixin-name: coverage-gcc
           colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
