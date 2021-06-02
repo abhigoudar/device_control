@@ -48,7 +48,7 @@ DeviceNode::on_activate(const rclcpp_lifecycle::State & state)
 {
   // Start the device. In this case, we will set a timer to produce
   // the fake data
-  loop_timer_ = create_wall_timer(30ms, std::bind(&DeviceNode::callback_imu_data, this));  
+  loop_timer_ = create_wall_timer(30ms, std::bind(&DeviceNode::callback_imu_data, this));
 
   imu_pub_->on_activate();
   return ControlledLifecycleNode::on_activate(state);
@@ -87,4 +87,3 @@ DeviceNode::callback_imu_data()
 }
 
 }  // namespace controlled_device_example
-

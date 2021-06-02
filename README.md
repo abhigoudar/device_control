@@ -1,5 +1,10 @@
 # device_control
 
+[![GitHub Action
+Status](https://github.com/MOCAP4ROS2-Project/device_control/workflows/main/badge.svg)](https://github.com/MOCAP4ROS2-Project/device_control)
+[![codecov](https://codecov.io/gh/MOCAP4ROS2-Project/device_control/main/graph/badge.svg)](https://codecov.io/gh/MOCAP4ROS2-Project/device_control)
+
+
 `device_control` implements a protocol that controls the start and stop of a device.
 
 The scenario to be controlled is shown in the following figure. Device systems, or systems that synchronize with them, are on the same network. Some of them are implemented in ROS2, and some others in ROS, connected with a ROS <-> ROS2 bridge. This protocol applies to systems in both standards. There may even be systems that require an analog trigger, and this protocol would apply to a digital <-> Analog bridge. All machines on the network are supposed to be synchronized by NTP or another more precise protocol.
