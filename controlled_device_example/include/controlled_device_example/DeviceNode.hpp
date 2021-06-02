@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef CONTROLLED_DEVICE_EXAMPLE__MOCAPNODE_HPP__
-#define CONTROLLED_DEVICE_EXAMPLE__MOCAPNODE_HPP__
+#ifndef CONTROLLED_DEVICE_EXAMPLE__DEVICENODE_HPP_
+#define CONTROLLED_DEVICE_EXAMPLE__DEVICENODE_HPP_
 
 #include "sensor_msgs/msg/imu.hpp"
 
@@ -28,7 +28,7 @@ namespace controlled_device_example
 class DeviceNode : public device_control::ControlledLifecycleNode
 {
 public:
-  explicit DeviceNode();
+  DeviceNode();
 
   using CallbackReturnT =
     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn;
@@ -49,4 +49,4 @@ private:
 }  // namespace controlled_device_example
 
 
-#endif  // CONTROLLED_DEVICE_EXAMPLE__MOCAPNODE_HPP__
+#endif  // CONTROLLED_DEVICE_EXAMPLE__DEVICENODE_HPP_
