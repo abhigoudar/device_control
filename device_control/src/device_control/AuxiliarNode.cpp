@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #include <string>
+#include <set>
 
 #include "lifecycle_msgs/msg/state.hpp"
 #include "lifecycle_msgs/msg/transition.hpp"
@@ -41,7 +42,7 @@ AuxiliarNode::on_configure(const rclcpp_lifecycle::State & state)
 {
   auto topics_params = get_parameter("topics").as_string_array();
   topics_ = std::set<std::string>(topics_params.begin(), topics_params.end());
-  
+
   return ControlledLifecycleNode::on_configure(state);
 }
 

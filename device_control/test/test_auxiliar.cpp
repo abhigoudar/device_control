@@ -55,9 +55,9 @@ TEST(Controltests, test_sync)
 
   auto param = rclcpp::Parameter(
     "topics", std::vector<std::string> {
-      "system1",
-      "system1/sensor1",
-      "system1/sensor2"});
+    "system1",
+    "system1/sensor1",
+    "system1/sensor2"});
 
   node_1->set_parameter(param);
 

@@ -15,6 +15,8 @@
 #ifndef DEVICE_CONTROL__AUXILIARNODE_HPP_
 #define DEVICE_CONTROL__AUXILIARNODE_HPP_
 
+#include <string>
+
 #include "device_control/ControlledLifecycleNode.hpp"
 
 #include "rclcpp/rclcpp.hpp"
