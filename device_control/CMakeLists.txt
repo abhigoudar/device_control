@@ -32,15 +32,23 @@ include_directories(include)
 add_library(${PROJECT_NAME} SHARED
   src/device_control/ControlledLifecycleNode.cpp
   src/device_control/ControllerNode.cpp
+  src/device_control/AuxiliarNode.cpp
 )
 ament_target_dependencies(${PROJECT_NAME} ${dependencies})
+
+add_executable(auxiliar_main src/auxiliar_main.cpp)
+ament_target_dependencies(auxiliar_main ${dependencies})
+target_link_libraries(auxiliar_main ${PROJECT_NAME})
 
 install(DIRECTORY include/
   DESTINATION include/
 )
 
+install(DIRECTORY config launch DESTINATION share/${PROJECT_NAME})
+
 install(TARGETS
   ${PROJECT_NAME}
+  auxiliar_main
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME}
