@@ -43,7 +43,7 @@ public:
 
   void control_start(const device_control_msgs::msg::Control::SharedPtr msg) override
   {
-    RCLCPP_INFO_STREAM(get_logger(), "Starting device");
+    RCLCPP_INFO(get_logger(), "Starting device");
     capturing_ = true;
     session_id_ = msg->session_id;
     last_msg_ = *msg;
@@ -51,7 +51,7 @@ public:
 
   void control_stop(const device_control_msgs::msg::Control::SharedPtr msg) override
   {
-    RCLCPP_INFO_STREAM(get_logger(), "Starting device");
+    RCLCPP_INFO(get_logger(), "Starting device");
     capturing_ = false;
     session_id_ = "";
     last_msg_ = *msg;

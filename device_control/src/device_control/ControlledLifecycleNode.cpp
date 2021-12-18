@@ -20,6 +20,7 @@
 #include "lifecycle_msgs/msg/transition.hpp"
 
 #include "rclcpp/rclcpp.hpp"
+#include "rclcpp/logging.hpp"
 #include "rclcpp_lifecycle/lifecycle_node.hpp"
 
 #include "device_control/ControlledLifecycleNode.hpp"
@@ -112,9 +113,9 @@ ControlledLifecycleNode::control_callback(const device_control_msgs::msg::Contro
 
         control_start(msg);
       } else {
-        RCLCPP_WARN_STREAM(
+        RCLCPP_WARN(
           get_logger(),
-          "Activation requested in state " << get_current_state().label());
+          "Activation requested in state: %s ", get_current_state().label());
       }
       break;
 

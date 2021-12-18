@@ -50,9 +50,9 @@ void
 AuxiliarNode::control_start(const device_control_msgs::msg::Control::SharedPtr msg)
 {
   (void)msg;
-  RCLCPP_INFO_STREAM(get_logger(), "System [" << get_name() << "] started with topics:");
+  RCLCPP_INFO(get_logger(), "System [%s] started with topics:", get_name());
   for (const auto & topic : topics_) {
-    RCLCPP_INFO_STREAM(get_logger(), "  - [" << topic << "]");
+    RCLCPP_INFO(get_logger(), "  - [%s]",  topic);
   }
 }
 
@@ -60,7 +60,7 @@ void
 AuxiliarNode::control_stop(const device_control_msgs::msg::Control::SharedPtr msg)
 {
   (void)msg;
-  RCLCPP_INFO_STREAM(get_logger(), "System [" << get_name() << "] stopped");
+  RCLCPP_INFO(get_logger(), "System [%s] stopped", get_name());
 }
 
 }  // namespace device_control
