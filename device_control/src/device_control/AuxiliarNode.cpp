@@ -31,7 +31,7 @@ using std::placeholders::_1;
 AuxiliarNode::AuxiliarNode(const std::string & system_id)
 : ControlledLifecycleNode(system_id)
 {
-  declare_parameter("topics");
+  declare_parameter("topics", std::vector<std::string>{});
 }
 
 using CallbackReturnT =

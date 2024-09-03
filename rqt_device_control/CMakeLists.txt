@@ -35,6 +35,7 @@ set(dependencies
   rclcpp
   qt_gui_cpp
   qt_gui_cpp
+  rqt_gui_cpp
   device_control
   device_control_msgs
   sensor_msgs
